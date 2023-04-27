@@ -3,7 +3,7 @@
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy .org/en/latest/topics/item-pipeline.html
+# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import logging
 import pymongo
 
@@ -18,7 +18,7 @@ class MongoDBPipeline(object):
     def from_crawler(cls, crawler):
         # pull info from settings.py
         return cls(
-            mongo_uri = crawler.settigns.get('MONGO_URI'),
+            mongo_uri = crawler.settings.get('MONGO_URI'),
             mongo_db = crawler.settings.get('MONGO_DB'),
             collection_name = crawler.settings.get('MONGO_COLLECTION')
         )

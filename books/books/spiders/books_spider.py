@@ -2,7 +2,7 @@ from scrapy import Spider
 from scrapy.selector import Selector
 from books.items import BooksItem
 
-class BooksSpidr(Spider):
+class BooksSpider(Spider):
     name = 'books'  # name of spider
     allowed_domains = ['http://books.toscrape.com/'] #base urls of allowed domains, for spider to crawl
     start_urls = [
